@@ -1,35 +1,37 @@
 # Use Case ID: #UC-3
 
-## Use Case Name: [Use Case Name]
+## Use Case Name: Delete Task
 
 ## Description
-- [Brief description of the use case, what it accomplishes, and its purpose]
+- This use case is for when users want to delete a task from the system.
 
 ### Actors:
-- [Primary Actor]
+- Primary Actor: User
 
 ### Stakeholders:
-- [List any relevant stakeholders involved in the process]
-
+- User: Requires the ability to delete irrelevant, completed, or duplicate tasks. 
+- Team Members: Need to stay informed about deleted tasks .
 ### Preconditions:
-- [Condition 1]
-- [Condition 2]
-- [Condition 3]
-- [Any other conditions that must be met before the use case starts]
+- The user must be logged into the system. 
+- The task to be deleted must exist in the system. 
+- The user must have sufficient permissions to delete the task.
 
 ### Main Flow:
-1. [Step 1: Description of the first action in the main flow]
-2. [Step 2: Description of the second action]
-3. [Step 3: Continue listing steps in sequence]
-4. [Step n: Final action leading to a successful outcome]
+1. The user is at the task list.
+2. The user selects a task to delete.
+3. The system prompts the user with a confirmation dialog to ensure they want to delete the task.
+4. The user confirms the deletion
+5. The system removes the task from the database
+6. A success message is displayed to the user, and the task is removed from the task list.
 
 ### Alternative Flow:
-1. [Alternative Step 1: Describe the first action in the alternative flow]
-2. [Alternative Step 2: Continue the alternative actions]
-3. [Continue describing the flow if necessary]
+1. The user is at the task list.
+2. The user selects a task to delete.
+3. The system prompts the user with a confirmation dialog to ensure they want to delete the task.
+4. The user cancels the action.
+5. The system does not delete the task, and it remains visible in the task list.
 
 ### Postconditions:
-1. [Postcondition 1: Describe the state of the system after the use case completes]
-2. [Postcondition 2: Any updates to data, user status, or system state]
-3. [Any other changes to the system state]
+1. The task is permanently removed from the system and is no longer visible in the task list. 
+2. Any team members linked to the task (e.g., as assignees) are notified of its deletion (if applicable).
 
