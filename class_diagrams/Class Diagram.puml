@@ -1,27 +1,47 @@
 @startuml
-'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+class User {
+    +String username
+    +String password
+    +String email
+    +login()
+    +logout()
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Task {
+    +String title
+    +String description
+    +Date dueDate
+    +String priority
+    +Boolean isCompleted
+    +createTask()
+    +editTask()
+    +deleteTask()
 }
+
+class TaskManagementSystem {
+    +List<Task> taskList
+    +List<User> users
+    +addTask(Task task)
+    +removeTask(Task task)
+    +validateTask(Task task)
+    +validateUser(User user)
+}
+
+class SystemValidator {
+    +validateTaskDetails(Task task)
+    +validateUserCredentials(User user)
+    +validateEditDetails(Task task)
+    +confirmTaskDeletion(Task task)
+}
+
+
+User --> "1..*" Task : "Assigns"
+TaskManagementSystem --> "1..*" Task : "Manages"
+TaskManagementSystem --> "1..*" User : "Contains"
+TaskManagementSystem --> SystemValidator : "Validates through"
+Task --> SystemValidator : "Validated by"
 
 @enduml
