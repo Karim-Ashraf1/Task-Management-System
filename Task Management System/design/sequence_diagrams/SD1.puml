@@ -1,11 +1,15 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+actor User
+entity Database
 
-autonumber
+User -> System: Clicks "Create Task"
+System -> User: Displays task creation form
+User -> System: Fills in required fields and clicks "Submit"
+System -> System: Validates the input
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+System -> Database: Save task details
+Database --> System: Acknowledgment
+System -> User: Displays success message
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+
 @enduml
