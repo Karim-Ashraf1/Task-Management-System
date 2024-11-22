@@ -16,7 +16,7 @@ This project demonstrates the application of OOAD principles, UML modeling, and 
 
 ## **Features**
 The system provides the following features:
-- **User Management**: Simulate user login and profile management (data saved in local storage).
+- **User Management**: Simulate user login and profile management.
 - **Task Management**: Create, update, delete, and view tasks.
 - **Deadline Tracking**: Assign deadlines and prioritize tasks based on urgency.
 - **Task Status**: Update and view the status of tasks (e.g., Pending, In Progress, Completed).
@@ -26,29 +26,27 @@ The system provides the following features:
 
 
 ## **Project Structure**
-```
+```plaintext
 OOAD-Project/  
 │  
 ├── README.md                 # Project Overview  
 ├── docs/                     # Documentation files  
-│   ├── requirements/         # Functional and Non-Functional Requirements  
-│   └── design/               # Design artifacts (e.g., sequence diagrams)
+│  
 | 
 ├── class_diagrams/           # Class and Object Diagrams
 |
-├── OCL_constraints/      # Object Constraint Language definitions  
+├── OCL_constraints/          # Object Constraint Language definitions  
 |
-├── usecases/             # Use Case Diagrams and Descriptions
+├── usecases/                 # Use Case Diagrams and Descriptions
 |
 ├── src/                      # Source code  
-│   ├── index.html            # Main HTML file  
-│   ├── style.css             # Styling  
-│   ├── app.js                # Main JavaScript logic  
-│   └── components/           # UI Components (if applicable)  
 │  
 ├── ui_mockups/               # User Interface Wireframes/Mockups  
-│  
-├── .gitignore                # Ignore unnecessary files  
+│
+├── design/                   # Design artifacts (e.g., sequence diagrams)
+|
+├── .gitignore                # Ignore unnecessary files
+|
 └── LICENSE                   # License Information  
 ```
 
@@ -57,7 +55,7 @@ OOAD-Project/
 ## **How to Run the Project**
 1. Clone the repository:
    ```bash
-   git clone [repository link]
+   git clone https://github.com/Karim-Ashraf1/Task-Management-System.git
    cd OOAD-Project
    ```
 2. Open the `index.html` file in your browser:
@@ -71,4 +69,4 @@ OOAD-Project/
 
 
 ## **License**
-This project is licensed under the MIT license. See the [MIT](LICENSE) file for details.
+This project is licensed under the MIT license. See the MIT file for details.
