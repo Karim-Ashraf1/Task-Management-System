@@ -1,35 +1,38 @@
 # Use Case ID: #UC-2
 
-## Use Case Name: [Use Case Name]
+## Use Case Name: Create Task
 
 ## Description
-- [Brief description of the use case, what it accomplishes, and its purpose]
+- This is for when a user wants to create a new task
 
 ### Actors:
-- [Primary Actor]
+- Primary Actor: User
 
 ### Stakeholders:
-- [List any relevant stakeholders involved in the process]
+- User: Needs a way to organize and track tasks.
+- Team Members: Tasks may be shared between team members
 
 ### Preconditions:
-- [Condition 1]
-- [Condition 2]
-- [Condition 3]
-- [Any other conditions that must be met before the use case starts]
+- The user must be logged into the system.
+- The user has sufficient permissions to create a task.
 
 ### Main Flow:
-1. [Step 1: Description of the first action in the main flow]
-2. [Step 2: Description of the second action]
-3. [Step 3: Continue listing steps in sequence]
-4. [Step n: Final action leading to a successful outcome]
+1. The user clicks "Create Task".
+2. The system displays a form for task creation.
+3. The user fills in the required fields: title, description, due date, priority, and assignee.
+4. The user clicks submit.
+5. The system saves the task to the database.
+6. A success message is displayed to the user, and the task is added to the task list.
 
 ### Alternative Flow:
-1. [Alternative Step 1: Describe the first action in the alternative flow]
-2. [Alternative Step 2: Continue the alternative actions]
-3. [Continue describing the flow if necessary]
+1. The user clicks "Create Task".
+2. The system displays a form for task creation.
+3. The user fills in the required fields: title, description, due date, priority, and assignee.
+4. The user clicks submit.
+5. The user submits the form with one or more required fields missing.
+6. The system displays an error message indicating the missing fields.
+7. The user corrects the input and resubmits the form.
 
 ### Postconditions:
-1. [Postcondition 1: Describe the state of the system after the use case completes]
-2. [Postcondition 2: Any updates to data, user status, or system state]
-3. [Any other changes to the system state]
-
+1. A new task is successfully saved in the system.
+2. The task is visible in the user's task list.
