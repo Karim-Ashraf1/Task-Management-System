@@ -1,11 +1,12 @@
 @startuml
-'https://plantuml.com/sequence-diagram
+actor User
+entity Database
 
-autonumber
+User -> System: Selects task to delete
+System -> User: Prompts confirmation dialog
+System -> Database: Deletes task
+Database --> System: Acknowledgment
+System -> User: Displays success message
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
 @enduml

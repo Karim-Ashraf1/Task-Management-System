@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c4be2be-bcf5-4427-b0b7-f4dab4172d47" name="Changes" comment="" />
+    <list default="true" id="4c4be2be-bcf5-4427-b0b7-f4dab4172d47" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Task Management System/design/sequence_diagrams/SD1.puml" beforeDir="false" afterPath="$PROJECT_DIR$/Task Management System/design/sequence_diagrams/SD1.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task Management System/design/sequence_diagrams/SD2.puml" beforeDir="false" afterPath="$PROJECT_DIR$/Task Management System/design/sequence_diagrams/SD2.puml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +39,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "taha",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/AHMED/Desktop/Assignments/OOAD/Task-Management-System"
   }
