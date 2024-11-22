@@ -1,22 +1,25 @@
 @startuml
-'https://plantuml.com/use-case-diagram
+left to right direction
 
-:Main Admin: as Admin
-(Use the application) as (Use)
+actor User
 
-User -> (Start)
-User --> (Use)
+rectangle "Task Management System" {
+    usecase "Login" as UC1
+    usecase "Create Task" as UC2
+    usecase "Delete Task" as UC3
+    usecase "Edit Task" as UC4
+}
 
-Admin ---> (Use)
+actor "System" as ValidationSystem
 
-note right of Admin : This is an example.
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
 
-note right of (Use)
-A note can also
-be on several lines
-end note
+UC1 --> ValidationSystem : Validates Credentials
+UC2 --> ValidationSystem : Validates Task Details
+UC4 --> ValidationSystem : Validates Edit Details
+UC3 --> ValidationSystem : Prompts Delete Confirmation
 
-note "This note is connected\nto several objects." as N2
-(Start) .. N2
-N2 .. (Use)
 @enduml

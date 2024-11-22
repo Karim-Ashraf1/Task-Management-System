@@ -11,13 +11,10 @@
 ### Stakeholders:
 - User: Requires the ability to delete irrelevant, completed, or duplicate tasks. 
 
-- The user must be logged into the system. 
-- The task to be deleted must exist in the system. 
-- The user must have sufficient permissions to delete the task.
-
 ### Preconditions:
 - The user must be logged into the system. 
-- The task to be deleted must exist in the system. 
+- The task to be deleted must exist in the system.
+- User must have internet
 
 
 ### Main Flow:
