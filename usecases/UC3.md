@@ -21,7 +21,7 @@
 2. The user selects a task to delete.
 3. The system prompts the user with a confirmation dialog to ensure they want to delete the task.
 4. The user confirms the deletion
-5. The system removes the task from the database
+5. The system removes the task from the local storage
 6. A success message is displayed to the user, and the task is removed from the task list.
 
 ### Alternative Flow:

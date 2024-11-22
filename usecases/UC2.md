@@ -21,7 +21,7 @@
 2. The system displays a form for task creation.
 3. The user fills in the required fields: title, description, due date, priority, and assignee.
 4. The user clicks submit.
-5. The system saves the task to the database.
+5. The system saves the task to the Local storage.
 6. A success message is displayed to the user, and the task is added to the task list.
 
 ### Alternative Flow:

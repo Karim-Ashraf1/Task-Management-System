@@ -1,14 +1,14 @@
 @startuml
 actor User
-entity Database
+entity Local_storage
 
 User -> System: Clicks "Create Task"
 System -> User: Displays task creation form
 User -> System: Fills in required fields and clicks "Submit"
 System -> System: Validates the input
 
-System -> Database: Save task details
-Database --> System: Acknowledgment
+System -> Local_storage: Save task details
+Local_storage --> System: Acknowledgment
 System -> User: Displays success message
 
 

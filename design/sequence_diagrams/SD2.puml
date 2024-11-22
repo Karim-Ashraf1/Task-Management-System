@@ -1,11 +1,11 @@
 @startuml
 actor User
-entity Database
+entity Local_storage
 
 User -> System: Selects task to delete
 System -> User: Prompts confirmation dialog
-System -> Database: Deletes task
-Database --> System: Acknowledgment
+System -> Local_storage: Deletes task
+Local_storage --> System: Acknowledgment
 System -> User: Displays success message
 
 
