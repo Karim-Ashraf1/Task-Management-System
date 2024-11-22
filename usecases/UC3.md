@@ -10,11 +10,15 @@
 
 ### Stakeholders:
 - User: Requires the ability to delete irrelevant, completed, or duplicate tasks. 
-- Team Members: Need to stay informed about deleted tasks .
-### Preconditions:
+
 - The user must be logged into the system. 
 - The task to be deleted must exist in the system. 
 - The user must have sufficient permissions to delete the task.
+
+### Preconditions:
+- The user must be logged into the system. 
+- The task to be deleted must exist in the system. 
+
 
 ### Main Flow:
 1. The user is at the task list.
@@ -33,5 +37,3 @@
 
 ### Postconditions:
 1. The task is permanently removed from the system and is no longer visible in the task list. 
-2. Any team members linked to the task (e.g., as assignees) are notified of its deletion (if applicable).
-
