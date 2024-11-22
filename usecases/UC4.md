@@ -35,5 +35,6 @@
 
 
 ### Postconditions:
-1. The system saves the task in the local storage
-2. The system updates the task
+1. The system displays item edited message 
+2. The system saves the task in the local storage
+3. The system updates the task
