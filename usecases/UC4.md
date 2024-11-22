@@ -37,4 +37,3 @@
 ### Postconditions:
 1. The system saves the task in the local storage
 2. The system updates the task
-
