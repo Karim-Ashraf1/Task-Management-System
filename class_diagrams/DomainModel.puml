@@ -22,9 +22,9 @@ entity TaskManagementSystem {
 entity SystemValidator {
 }
 
-User --> "1..*" Task : "assigns"
-TaskManagementSystem --> "1..*" Task : "manages"
-TaskManagementSystem --> "1..*" User : "contains"
+User "1..*"--> "1..*" Task : "assigns"
+TaskManagementSystem "1..*" --> "1..*" Task : "manages"
+TaskManagementSystem"1..*" --> "1..*" User : "contains"
 TaskManagementSystem --> SystemValidator : "validates through"
 Task --> SystemValidator : "validated by"
 

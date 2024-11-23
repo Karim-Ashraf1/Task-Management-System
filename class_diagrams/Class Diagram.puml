@@ -38,9 +38,9 @@ class SystemValidator {
 }
 
 
-User --> "1..*" Task : "Assigns"
-TaskManagementSystem --> "1..*" Task : "Manages"
-TaskManagementSystem --> "1..*" User : "Contains"
+User "1..*"--> "1..*" Task : "Assigns"
+TaskManagementSystem  "1..*"--> "1..*" Task : "Manages"
+TaskManagementSystem "1..*"--> "1..*" User : "Contains"
 TaskManagementSystem --> SystemValidator : "Validates through"
 Task --> SystemValidator : "Validated by"
 
