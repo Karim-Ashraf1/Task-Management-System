@@ -13,6 +13,7 @@
 ### Preconditions:
 - There must be at least one task in the system
 - The task to be edited must be selected from the list of tasks
+- The user needs to have an internet connection 
 
 ### Main Flow:
 1. The user goes to the task list
