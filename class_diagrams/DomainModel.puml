@@ -1,0 +1,31 @@
+@startuml
+
+entity User {
+    - username: String
+    - password: String
+    - email: String
+}
+
+entity Task {
+    - title: String
+    - description: String
+    - dueDate: Date
+    - priority: String
+    - isCompleted: Boolean
+}
+
+entity TaskManagementSystem {
+    - taskList: List<Task>
+    - users: List<User>
+}
+
+entity SystemValidator {
+}
+
+User --> "1..*" Task : "assigns"
+TaskManagementSystem --> "1..*" Task : "manages"
+TaskManagementSystem --> "1..*" User : "contains"
+TaskManagementSystem --> SystemValidator : "validates through"
+Task --> SystemValidator : "validated by"
+
+@enduml
