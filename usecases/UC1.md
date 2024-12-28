@@ -1,35 +1,40 @@
 # Use Case ID: #UC-1
 
-## Use Case Name: Login
+## Use Case Name: Login to System
 
-## Description
-- The process of logging the user in the platform by adding his/her username and password
+### Description
+- The process of logging the user into the platform by verifying their username and password.
 
 ### Actors:
-- User
-
-### Stakeholders:
-- Authentication Provider
-- System
+- Primary Actor: User
+- Secondary Actor: Validation System
 
 ### Preconditions:
-- User have stable internet connection.
+- User must have a stable internet connection.
 - User must have an existing account.
-- The system is working.
+- The system is operational.
 
 ### Main Flow:
-1. System ask for Credentials (username, password)
-2. User Enters Credentials (username, password)
-3. System Validates Credentials
-4. Successful Login
+1. System asks for credentials (username, password).
+2. User enters credentials (username, password).
+3. System validates credentials with the Validation System.
+4. Upon success, the system logs the user in.
 
 ### Alternative Flow:
-1. User entered wrong password 3 times
-2. User press on forgot password button
-3. User is rerouted to a page to enter new password and confirm new password
-4. User receives a mail with the confirmation that his password was changed
-5. User is redirected to login page again to enter his credentials
+**Step 3: Validation Fails**
+1. User enters incorrect credentials three times.
+2. System prompts the user to reset their password.
+3. User navigates to the password reset page and provides a new password.
+4. System sends a confirmation email.
+5. User logs in with the updated password.
 
 ### Postconditions:
-1. User is transferred to the homepage
-2. user is logged in and can use the functionalities of the app 
+- The user is redirected to the homepage and logged in to access the system's functionalities.
+
+---
+
+# Use Case ID: #UC-2
+
+## Use Case Name: Create Task
+
+### Descriptio
