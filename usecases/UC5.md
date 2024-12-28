@@ -2,7 +2,7 @@
 
 ## Use Case Name: Mark Task as Completed
 
-## Description
+### Description
 - This use case describes the process of marking a task as completed by the user.
 
 ### Actors:
@@ -25,6 +25,7 @@
 5. The task is moved to the "Completed" section of the task list or visually marked as completed.
 
 ### Alternative Flow:
+**Step 3: System Error**
 1. The user views the task list and selects a task they want to mark as completed.
 2. The user clicks the "Mark as Completed" button.
 3. The system encounters an unexpected error (e.g., server issue or database failure) and cannot update the task status.
