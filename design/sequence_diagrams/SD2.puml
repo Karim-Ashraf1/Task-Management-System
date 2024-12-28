@@ -4,7 +4,11 @@ actor User
 
 User -> System: Selects task to delete
 System -> User: Prompts confirmation dialog
-System -> System: Deletes task
-System -> User: Displays success message
+alt User Confirms Deletion
+    System -> System: Deletes task
+    System -> User: Displays success message
+else User Cancels Deletion
+    System -> User: Displays cancellation message
+end
 
 @enduml
