@@ -2,35 +2,28 @@
 
 ## Use Case Name: Delete Task
 
-## Description
-- This use case is for when users want to delete a task from the system.
+### Description
+- The user can delete a task from the system.
 
 ### Actors:
 - Primary Actor: User
-
-### Stakeholders:
-- User: Requires the ability to delete irrelevant, completed, or duplicate tasks. 
+- Secondary Actor: Validation System
 
 ### Preconditions:
-- The user must be logged into the system. 
-- The task to be deleted must exist in the system.
-- User must have internet
-
+- User must be logged in.
+- The task must exist in the system.
+- The system must be operational.
 
 ### Main Flow:
-1. The user is at the task list.
-2. The user selects a task to delete.
-3. The system prompts the user with a confirmation dialog to ensure they want to delete the task.
-4. The user confirms the deletion
-5. The system removes the task from the local storage
-6. A success message is displayed to the user, and the task is removed from the task list.
+1. User selects a task to delete.
+2. System prompts the user for confirmation.
+3. User confirms the deletion.
+4. System deletes the task from the task list.
 
 ### Alternative Flow:
-1. The user is at the task list.
-2. The user selects a task to delete.
-3. The system prompts the user with a confirmation dialog to ensure they want to delete the task.
-4. The user cancels the action.
-5. The system does not delete the task, and it remains visible in the task list.
+**Step 3: User Cancels Deletion**
+1. User chooses to cancel the deletion process.
+2. The system returns to the task list view, and no changes are made.
 
 ### Postconditions:
-1. The task is permanently removed from the system and is no longer visible in the task list. 
+- The task is removed from the task list in the system.
