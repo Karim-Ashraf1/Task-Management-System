@@ -6,6 +6,11 @@ User -> System: Clicks "Create Task"
 System -> User: Displays task creation form
 User -> System: Fills in required fields and clicks "Submit"
 System -> System: Validates the input
-System -> User: Displays success message
+alt Invalid Input
+    System -> User: Displays error message
+else Valid Input
+    System -> System: Saves the task
+    System -> User: Displays success message
+end
 
 @enduml
