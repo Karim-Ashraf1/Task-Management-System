@@ -30,11 +30,3 @@
 
 ### Postconditions:
 - The user is redirected to the homepage and logged in to access the system's functionalities.
-
----
-
-# Use Case ID: #UC-2
-
-## Use Case Name: Create Task
-
-### Descriptio
