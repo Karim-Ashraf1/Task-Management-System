@@ -1,25 +1,45 @@
 @startuml
-left to right direction  
+' Define classes for the diagram
 
-actor User
-
-rectangle "Task Management System" {
-    usecase "Login to System" as UC1
-    usecase "Create Task" as UC2
-    usecase "Delete Task" as UC3
-    usecase "Edit Task" as UC4
+class User {
+    - userId: String
+    - username: String
+    - email: String
+    + authenticate(username: String, password: String): boolean
+    + getTasks(): List<Task>
 }
 
-actor "Validation System" as ValidationSystem
+class Task {
+    - taskId: String
+    - taskName: String
+    - status: String
+    - dueDate: Date
+    - user: User
+    + markAsCompleted(): void
+    + setStatus(status: String): void
+}
 
-User --> UC1
-User --> UC2
-User --> UC3
-User --> UC4
+class Category {
+    - categoryId: String
+    - categoryName: String
+    + getTasks(): List<Task>
+}
 
-UC1 --> ValidationSystem : Validates Credentials
-UC2 --> ValidationSystem : Validates Task Details
-UC4 --> ValidationSystem : Validates Edit Details
-UC3 --> ValidationSystem : Prompts Delete Confirmation
+class AuthenticationService {
+    - userRepository: UserRepository
+    + login(username: String, password: String): User
+}
+
+class SystemValidator {
+    + validateUserAccess(user: User): boolean
+    + validateTaskCompletion(task: Task): boolean
+}
+
+' Define relationships between classes
+User "1" -- "*" Task : owns >
+Task "*" -- "1" Category : belongs to >
+AuthenticationService ..> User : interacts with >
+SystemValidator ..> Task : validates >
+SystemValidator ..> User : validates >
 
 @enduml
