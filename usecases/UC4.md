@@ -1,41 +1,31 @@
 # Use Case ID: #UC-4
 
-## Use Case Name: Edit Task 
+## Use Case Name: Edit Task
 
-## Description
-- This use case allows the user to modify the details of an existing task, such as its title, description, priority, due date, or status. The purpose is to ensure the user can update tasks to reflect changes in requirements or priorities.
+### Description
+- The user can edit the details of an existing task, such as the title, description, or due date.
+
 ### Actors:
-- User
-
-### Stakeholders:
-- User
+- Primary Actor: User
+- Secondary Actor: Validation System
 
 ### Preconditions:
-- There must be at least one task in the system
-- The task to be edited must be selected from the list of tasks
-- The user needs to have an internet connection 
+- User must be logged in.
+- The task must exist in the system.
+- The system must be operational.
 
 ### Main Flow:
-1. The user goes to the task list
-2. The user selects the task they wish to edit
-3. The system displays the task's details with an edit button
-4. The user clicks on edit
-5. The user updates the task
-6. The user clicks on save button
-7. The system checks if the edit is valid (eg. no empty fields)
-
+1. User selects a task to edit.
+2. System displays the current details of the task.
+3. User modifies the task details (e.g., title, description, due date).
+4. System validates the new task details with the Validation System.
+5. Upon validation success, the task is updated in the system.
 
 ### Alternative Flow:
-   #### Input Validation Fails:
-     1. The user enters empty fields or wrong due date
-     2. The system displays an error message according to the error
-   #### Edit Cancel:
-     1. The user clicks on cancel edit
-     2. The system closes the edit interface withot saving changes 
-   
-
+**Step 4: Validation Fails**
+1. The modified task details are invalid (e.g., title is too short).
+2. The system displays an error message and prompts the user to correct the issue.
+3. User makes the necessary changes and resubmits the task.
 
 ### Postconditions:
-1. The system displays item edited message 
-2. The system saves the task in the local storage
-3. The system updates the task
+- The task is updated with the new details in the system.
