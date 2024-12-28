@@ -24,8 +24,8 @@ entity SystemValidator {
 
 User "1"--> "0..*" Task : "assigns"
 TaskManagementSystem "1" --> "0..*" Task : "manages"
-TaskManagementSystem"1" --> "..*" User : "contains"
-TaskManagementSystem "1" -->"1" SystemValidator : "validates through"
-Task "1..*"--> "1"SystemValidator : "validated by"
+TaskManagementSystem "1" --> "0..*" User : "contains"
+TaskManagementSystem "1" --> "1" SystemValidator : "validates through"
+Task "1..*" --> "1" SystemValidator : "validated by"
 
 @enduml
