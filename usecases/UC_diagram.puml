@@ -1,16 +1,16 @@
 @startuml
-left to right direction
+left to right direction  
 
 actor User
 
 rectangle "Task Management System" {
-    usecase "Login" as UC1
+    usecase "Login to System" as UC1
     usecase "Create Task" as UC2
     usecase "Delete Task" as UC3
     usecase "Edit Task" as UC4
 }
 
-actor "System" as ValidationSystem
+actor "Validation System" as ValidationSystem
 
 User --> UC1
 User --> UC2
