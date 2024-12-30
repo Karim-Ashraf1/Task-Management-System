@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/salt
+
+skinparam backgroundColor #f9f9f9
+skinparam shadowing false
+skinparam roundCorner 10
+
+salt
+{
+  {+
+    <color #2C3E50><b>Task Management System</b></color>
+  }
+
+  <color #ECF0F1>
+  {
+    <color #3498DB>[Dashboard]</color>
+    <color #3498DB>[Tasks]</color>
+    <color #3498DB>[Notifications]</color>
+    <color #3498DB>[Settings]</color>
+  }
+  </color>
+
+  {+
+    <color #2C3E50><b>Tasks</b></color>
+  }
+  <color #ECF0F1>
+  {
+    +----------------------+----------------------+----------------------+
+    | <color #2C3E50>Task Title</color>          | <color #2C3E50>Assignee</color>         | <color #2C3E50>Status</color>           |
+    +----------------------+----------------------+----------------------+
+    | Design Wireframe     | Karim Ashraf         | <color #F1C40F>[In Progress]</color>
+    |
+    | Fix Bug #123         | Faris Sharara         | <color #E74C3C>[To Do]</color>
+    |
+    | Submit Report        | Ahmed Taha          | <color #2ECC71>[Done]</color>           |
+    +----------------------+----------------------+----------------------+
+  }
+  </color>
+
+  <color #ECF0F1>
+  {
+    [<color #3498DB>Add New Task</color>] [<color #3498DB>Filter Tasks</color>]
+  }
+  </color>
+
+  {+
+    <color #2C3E50><b>Notifications</b></color>
+  }
+  <color #ECF0F1>
+  {
+    () <color #E74C3C>Task "Fix Bug #123" is overdue.</color>
+    () <color #F39C12>Task "Submit Report" is due tomorrow.</color>
+  }
+  </color>
+
+  {+
+    <color #2C3E50><b>Quick Add Task</b></color>
+  }
+  <color #ECF0F1>
+  {
+    "Task Title:               "
+    "Assignee:                 "
+    ^Priority: Low, Medium, High^
+    [<color #3498DB>Add Task</color>]
+  }
+  </color>
+}
+@enduml
