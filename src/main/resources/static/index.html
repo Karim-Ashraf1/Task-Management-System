@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Management System</title>
+
+        <!-- Link to external CSS file -->
+        <link rel="stylesheet" href="/static/css/styles.css">
+
+    </head>
+    <body>
+    <h1>Task Management System</h1>
+
+    <!-- Task Creation Form -->
+    <form method="post" action="/Task-Management-System/TaskManagementSystem/static/index.html">
+        <input type="text" name="title" placeholder="Task Title" required>
+        <input type="text" name="description" placeholder="Task Description" required>
+        <input type="date" name="dueDate" required>
+        <select name="status">
+            <option value="TODO">TODO</option>
+            <option value="IN_PROGRESS">IN PROGRESS</option>
+            <option value="DONE">DONE</option>
+        </select>
+        <button type="submit">Create Task</button>
+    </form>
+
+    <!-- Task List -->
+    <table>
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Loop through tasks -->
+        <tr th:each="task : ${tasks}">
+            <td th:text="${task.title}"></td>
+            <td th:text="${task.description}"></td>
+            <td th:text="${task.dueDate}"></td>
+            <td th:text="${task.status}"></td>
+            <td>
+                <a th:href="@{/tasks/delete/{id}(id=${task.id})}">
+                    <button>Delete</button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </body>
+    </html>
