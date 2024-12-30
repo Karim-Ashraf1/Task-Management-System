@@ -1,0 +1,17 @@
+@startuml
+actor User
+participant TaskController
+participant TaskService
+participant TaskRepository
+participant Database
+
+User -> TaskController: Create Task Request (title, description, dueDate, status)
+TaskController -> TaskService: Validate task data
+TaskService -> TaskService: Check required fields
+TaskService -> TaskRepository: Save task (title, description, dueDate, status)
+TaskRepository -> Database: Insert task into DB
+Database --> TaskRepository: Confirmation
+TaskRepository --> TaskService: Task saved
+TaskService --> TaskController: Task creation success response
+TaskController --> User: Task created successfully
+@enduml

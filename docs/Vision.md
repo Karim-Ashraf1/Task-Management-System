@@ -72,15 +72,9 @@ The Task Management System will serve as a web-based application that integrates
    - Automated reminders for upcoming deadlines.
    - Notifications for task updates or comments.
 
-4. **Collaborative Comments**:
-   - Team members can comment on tasks to discuss details.
-
-5. **Search and Filtering**:
+4. **Search and Filtering**:
    - Users can search tasks by title, assignee, status, or due date.
    - Filter options for viewing tasks based on priority or team.
-
-6. **Reporting**:
-   - Generate reports on task progress, completion rates, and overdue tasks.
 
 ---
 
@@ -92,5 +86,4 @@ The Task Management System will serve as a web-based application that integrates
 
 ---
 
-This Vision document serves as the foundation for the development of the Task Management System. By addressing the needs of stakeholders and defining high-level goals and system features, it provides a clear roadmap for project execution and future enhancements.
 
