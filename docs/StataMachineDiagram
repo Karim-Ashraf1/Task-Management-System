@@ -1,0 +1,11 @@
+@startuml
+[*] --> ViewingTaskDetails
+
+ViewingTaskDetails: Display task details (title, description, due date, status)
+
+ViewingTaskDetails --> EditingTask: Click "Edit"
+ViewingTaskDetails --> ViewingTasks: Click "Back"
+
+EditingTask --> ViewingTaskDetails: Submit changes
+EditingTask --> ViewingTaskDetails: Cancel
+@enduml
