@@ -1,0 +1,31 @@
+@startuml
+[*] --> LoginScreen
+
+LoginScreen: User enters credentials
+LoginScreen --> TaskListScreen: Successful login
+LoginScreen --> LoginScreen: Failed login (retry)
+
+TaskListScreen: Display list of tasks
+
+TaskListScreen --> ViewingTaskDetails: Select a task
+TaskListScreen --> CreatingTask: Click "Create Task"
+TaskListScreen --> EditingTask: Click "Edit Task" on a selected task
+TaskListScreen --> DeletingTask: Click "Delete Task" on a selected task
+TaskListScreen --> LoginScreen: Click "Logout"
+
+ViewingTaskDetails: Display details of a selected task
+ViewingTaskDetails --> TaskListScreen: Click "Back"
+ViewingTaskDetails --> EditingTask: Click "Edit"
+
+CreatingTask: User enters task details
+CreatingTask --> TaskListScreen: Submit task
+CreatingTask --> TaskListScreen: Cancel
+
+EditingTask: User modifies task details
+EditingTask --> TaskListScreen: Submit changes
+EditingTask --> TaskListScreen: Cancel
+
+DeletingTask: Confirm task deletion
+DeletingTask --> TaskListScreen: Confirm deletion
+DeletingTask --> TaskListScreen: Cancel
+@enduml
