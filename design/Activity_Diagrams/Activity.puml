@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:User logs in;
+if (Valid login?) then (yes)
+  :Show dashboard;
+  :User creates a new task;
+  if (Task details valid?) then (yes)
+    :Save task to database;
+    :Update task list;
+  else (no)
+    :Show error message;
+  endif
+  :User updates task status;
+  if (Task status valid?) then (yes)
+    :Update database;
+  else (no)
+    :Show error message;
+  endif
+else (no)
+  :Show login error;
+endif
+:User logs out;
+stop
+
+@enduml

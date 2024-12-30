@@ -1,0 +1,20 @@
+@startuml
+actor User
+participant TaskController
+participant TaskService
+participant TaskRepository
+participant Database
+
+User -> TaskController: Delete Task Request (taskId)
+TaskController -> TaskService: Validate taskId
+TaskService -> TaskRepository: Check if task exists (taskId)
+TaskRepository -> Database: Query task by ID
+Database --> TaskRepository: Task data (if exists)
+TaskRepository --> TaskService: Task found
+TaskService -> TaskRepository: Delete task (taskId)
+TaskRepository -> Database: Delete task from DB
+Database --> TaskRepository: Confirmation
+TaskRepository --> TaskService: Deletion success
+TaskService --> TaskController: Task deleted successfully
+TaskController --> User: Task deleted successfully
+@enduml
