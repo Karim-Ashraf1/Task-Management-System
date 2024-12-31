@@ -60,7 +60,7 @@ OOAD-Project/
    ```
 2. Open the `index.html` file in your browser:
    ```bash
-   open src/index.html
+   open src/taskView.html
    ```
 3. All data will be stored in your browser’s local storage.
 

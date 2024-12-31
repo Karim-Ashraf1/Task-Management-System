@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Details</title>
+</head>
+<body>
+<h1 th:text="${task.title}"></h1>
+<p>Description: <span th:text="${task.description}"></span></p>
+<p>Status: <span th:text="${task.status}"></span></p>
+<p>Assignee: <span th:text="${task.assignee}"></span></p>
+<p>Due Date: <span th:text="${task.dueDate}"></span></p>
+<a th:href="@{/tasks-view}">Back to Task List</a>
+</body>
+</html>

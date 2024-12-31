@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h1>Task Management System</h1>
+
+<!-- Task Creation/Editing Form -->
+<form th:action="@{/tasks-view/save}" method="post">
+    <input type="hidden" name="taskId" th:value="${editTask?.id}">
+
+    <label for="title">Task Title:</label>
+    <input type="text" id="title" name="title" th:value="${editTask?.title}" placeholder="Task Title" required>
+
+    <label for="description">Task Description:</label>
+    <input type="text" id="description" name="description" th:value="${editTask?.description}" placeholder="Task Description" required>
+
+    <label for="dueDate">Due Date:</label>
+    <input type="date" id="dueDate" name="dueDate" th:value="${editTask?.dueDate}" required>
+
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+        <option value="TODO" th:selected="${editTask?.status == 'TODO'}">TODO</option>
+        <option value="IN_PROGRESS" th:selected="${editTask?.status == 'IN_PROGRESS'}">IN PROGRESS</option>
+        <option value="DONE" th:selected="${editTask?.status == 'DONE'}">DONE</option>
+    </select>
+
+    <label for="assignee">Assignee:</label>
+    <input type="text" id="assignee" name="assignee" th:value="${editTask?.assignee}" placeholder="Assignee">
+
+    <button type="submit" th:text="${editTask == null ? 'Create Task' : 'Update Task'}"></button>
+</form>
+
+<!-- Task List -->
+<table>
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Assignee</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task : ${tasks}">
+        <td th:text="${task.title}"></td>
+        <td th:text="${task.description}"></td>
+        <td th:text="${task.dueDate}"></td>
+        <td th:text="${task.status}"></td>
+        <td th:text="${task.assignee}"></td>
+        <td>
+            <form th:action="@{/tasks-view/delete}" method="post">
+                <input type="hidden" name="taskId" th:value="${task.id}">
+                <button type="submit">Remove</button>
+            </form>
+            <form th:action="@{/tasks-view/edit}" method="get">
+                <input type="hidden" name="taskId" th:value="${task.id}">
+                <button type="submit" >Edit</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
