@@ -18,8 +18,8 @@ public class TaskLoggerService {
         // Logs task deletion details
         logger.log("Task deleted: ID = " + taskId);
     }
-    public void logTaskEdit(String taskId) {
+    public void logTaskEdit(String taskTitle) {
         // Logs task Edit details
-        logger.log("Task Edited = " + taskId);
+        logger.log("Task Edited = " + taskTitle);
     }
 }
