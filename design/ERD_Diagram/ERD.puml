@@ -15,6 +15,7 @@ entity TaskRepository {
     + deleteById(id: Long): void
 }
 
+
 entity TaskLoggerService {
     + List<String> logs
     + logTaskCreation(taskTitle: String): void
