@@ -1,0 +1,39 @@
+@startuml
+entity Task {
+    + Long id
+    + String title
+    + String description
+    + String status
+    + LocalDateTime createdDate
+    + LocalDateTime updatedDate
+}
+
+entity TaskRepository {
+    + List<Task> tasks
+    + findAll(): List<Task>
+    + save(task: Task): void
+    + deleteById(id: Long): void
+}
+
+entity TaskLoggerService {
+    + List<String> logs
+    + logTaskCreation(taskTitle: String): void
+    + logTaskDeletion(taskId: Long): void
+}
+
+entity TaskCreationService {
+    + createTaskFromTemplate(templateType: String): Task
+}
+
+entity TaskController {
+    + getAllTasks(): String
+    + createTask(task: Task): String
+    + createTaskFromTemplate(templateType: String): String
+    + deleteTask(id: Long): String
+}
+
+TaskRepository --> Task : manages >
+TaskLoggerService --> Task : logs actions for >
+TaskCreationService --> Task : creates >
+TaskController --> Task : manages via endpoints >
+@enduml
