@@ -1,0 +1,46 @@
+@startuml
+skinparam packageStyle rectangle
+skinparam backgroundColor #FFFFFF
+
+title Logical Architecture
+
+package "Logical Architecture" {
+
+    package "UI Layer" as UILayer {
+        rectangle "UI_Subsystem" as UIComponents
+        note bottom of UILayer
+        - Handles user interactions\n
+        - Presentation logic\n
+        - User experience management
+        end note
+    }
+
+    package "Application logic and domain objects layer" as AppLayer {
+        rectangle "Application Logic" as AppLogic
+        rectangle "Domain Constrains" as DomainObjects
+        note bottom of AppLayer
+        - Manages core business rules and processes\n
+        - Coordinates requests between UI and services\n
+        - Encapsulates domain-specific knowledge
+        end note
+    }
+
+    package "Technical Services Layer" as TechLayer {
+        rectangle "Database Interface" as DBInterface
+        rectangle "Error Logging" as ErrorLogging
+        rectangle "External APIs" as ExternalAPIs
+        note bottom of TechLayer
+        - Provides technical support services\n
+        - Handles database operations\n
+        - Interacts with external systems
+        end note
+    }
+}
+
+UIComponents --> AppLogic : User Inputs/Commands
+AppLogic --> DomainObjects : Processes/Business Rules
+AppLogic --> DBInterface : Read/Write Data
+AppLogic --> ErrorLogging : Logs Errors
+AppLogic --> ExternalAPIs : Access External Services
+
+@enduml
