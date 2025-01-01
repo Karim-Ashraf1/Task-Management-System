@@ -41,7 +41,6 @@ The Task Management System is designed to help individuals and teams manage thei
 ## Free Open Source Components
 
 - **Spring Boot** for application development.
-- **Hibernate** for ORM (Object-Relational Mapping).
 - **JPA Database** for lightweight development and testing.
 - **Maven** for dependency management.
 
@@ -53,7 +52,7 @@ The Task Management System is designed to help individuals and teams manage thei
 
 - **REST APIs**: The system will expose RESTful endpoints for CRUD operations on tasks.
     - Example: `GET /tasks`, `POST /tasks`, `PUT /tasks/{id}`, `DELETE /tasks/{id}`.
-- **Database Interface**: Hibernate will handle communication with the underlying database.
+- **Database Interface**: Jpa will handle communication with the underlying database.
 - **External Notifications**: The system may integrate with third-party notification services.
 
 ### User Interfaces
